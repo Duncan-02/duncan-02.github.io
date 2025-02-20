@@ -30,7 +30,7 @@ layout: page
 </div>
 
 {% assign author_urls = '' %}
-{%comment%}
+{% comment %}
 {% if page.github_username %}
     {% assign author_urls = author_urls | append: '"https://github.com/' | append: page.github_username | append: '",' %}
 {% endif %}
@@ -43,15 +43,15 @@ layout: page
 {% if page.medium_username %}
     {% assign author_urls = author_urls | append: '"https://medium.com/@' | append: page.medium_username | append: '",' %}
 {% endif %}
-{%endcomment%}
+{% endcomment %}
 {% if page.instagram_username %}
     {% assign author_urls = author_urls | append: '"https://www.instagram.com/2duncann",' %}
 {% endif %}
-{%comment%}
+{% comment %}
 {% if page.linkedin_username %}
     {% assign author_urls = author_urls | append: '"https://www.linkedin.com/in/' | append: page.linkedin_username | append: '",' %}
 {% endif %}
-{%endcomment%}
+{% endcomment %}
 
 <script type="application/ld+json">
 {
