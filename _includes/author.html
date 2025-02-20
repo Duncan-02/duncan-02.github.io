@@ -13,6 +13,7 @@
       </h3>
       <p class="desc">{{ author.bio }}</p>
       <p>
+        {% comment %}
         {% if author.github_username %}
           <a href="https://github.com/{{ author.github_username }}" title="Github">
             <svg><use xlink:href="#icon-github"></use></svg>
@@ -33,16 +34,19 @@
             <svg><use xlink:href="#icon-medium"></use></svg>
           </a>
         {% endif %}
+        {% endcomment% }
         {% if author.instagram_username %}
-          <a href="https://www.instagram.com/{{ author.instagram_username }}" title="Instagram">
+          <a href="https://www.instagram.com/{{ author.instagram_username | default: '2duncann' }}" title="Instagram">
             <svg><use xlink:href="#icon-instagram"></use></svg>
           </a>
         {% endif %}
+        {% comment %}
         {% if author.linkedin_username %}
           <a href="https://www.linkedin.com/in/{{ author.linkedin_username }}" title="LinkedIn">
             <svg><use xlink:href="#icon-linkedin"></use></svg>
           </a>
         {% endif %}
+        {% endcomment %}
       </p>
     </div>
   </section>
